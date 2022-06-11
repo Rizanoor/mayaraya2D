@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Store Homepage
+    Mayaraya
 @endsection
 
 @section('content')
@@ -73,7 +73,7 @@
   </section>
 
   <!-- Create Avatar -->
-  <section class="message-subscribe-us__ create text-center position-relative" style="box-sizing: border-box; 
+  <section class="message-subscribe-us__ create text-center position-relative" style="box-sizing: border-box;
           background: linear-gradient(180deg, rgba(235, 106, 87, 0) -125.97%, rgb(235, 107, 87) 159.09%), url('images/awan.png');
           background-size: cover;
           background-repeat: no-repeat;
@@ -81,7 +81,7 @@
     <h4 class="headline mb-4 text-white" data-aos="fade-up" data-aos-delay="500">
       Ayo, buat akun sekarang!
     </h4>
-    <button class="btn btn-fill text-white" data-aos="fade-up" data-aos-delay="600">Buat Akun 
+    <button class="btn btn-fill text-white" data-aos="fade-up" data-aos-delay="600">Buat Akun
       <i class="fa-solid fa-angle-right"></i>
     </button>
   </section>
@@ -104,7 +104,7 @@
       <div>
         <div class="mx-auto d-flex flex-lg-row flex-column hero hero-land">
           <!-- Left Column -->
-          <div class="left-column d-flex flex-lg-grow-1 flex-column 
+          <div class="left-column d-flex flex-lg-grow-1 flex-column
               align-items-lg-start text-lg-start align-items-center text-center" data-aos="fade-up"
             data-aos-delay="700">
             <img id="img-fluid" class="h-auto mw-100 mt-5" src="images/img_riang_gembira.png" alt="">
@@ -133,7 +133,7 @@
         <!-- Land Manasik Maya -->
         <div class="mx-auto d-flex flex-lg-row flex-column hero hero-land">
           <!-- Left Column -->
-          <div class="left-column d-flex flex-lg-grow-1 flex-column 
+          <div class="left-column d-flex flex-lg-grow-1 flex-column
               align-items-lg-start text-lg-start align-items-center text-center" data-aos="fade-up"
             data-aos-delay="800">
             <img id="img-fluid" class="h-auto mw-100 mt-5" src="images/img_manasik_maya.png" alt="">
@@ -162,7 +162,7 @@
         <!-- Land Sorak Sorai -->
         <div class="mx-auto d-flex flex-lg-row flex-column hero hero-land">
           <!-- Left Column -->
-          <div class="left-column d-flex flex-lg-grow-1 flex-column 
+          <div class="left-column d-flex flex-lg-grow-1 flex-column
                 align-items-lg-start text-lg-start align-items-center text-center" data-aos="fade-up"
             data-aos-delay="1000">
             <img id="img-fluid" class="h-auto mw-100" src="images/img_sorak_sorai.png" alt="">
