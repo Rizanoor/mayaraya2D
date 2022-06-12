@@ -121,11 +121,11 @@
             </p>
 
             <div class="flex-sm-row flex-column align-items-center mx-lg-0 mx-auto justify-content-center gap-3">
-              <button class="btn btn-outlinee">
+              <a href="https://rianggembira.festivo.co/" class="btn btn-outlinee" target="blank">
                 <div class="d-flex align-items-center">
                   <b> Kunjungi Website <i class="fa-solid fa-angle-right arrow"></i></b>
                 </div>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -150,11 +150,11 @@
             </p>
 
             <div class="flex-sm-row flex-column align-items-center mx-lg-0 mx-auto justify-content-center gap-3">
-              <button class="btn btn-outlinee">
+              <a href="https://manasikmaya.festivo.co/" class="btn btn-outlinee" target="blank">
                 <div class="d-flex align-items-center">
                   <b> Kunjungi Website <i class="fa-solid fa-angle-right arrow"></i></b>
                 </div>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -170,7 +170,7 @@
 
           <!-- Right Column -->
           <div class="col-lg-4 right-column desc" data-aos="fade-up" data-aos-delay="1100">
-            <img src="images/img_logo_sorak_sorai.png" class="img-fluid w-50 mb-3" alt="">
+            <img src="images/img_logo_sorak_sorai.png" class="img-fluid w-50 mb-3"  alt="">
             <p class="icon-caption">
               Suatu dunia virtual tempat anda untuk mengadakan berbagai acara,
               Sorak Sorai hadir dengan berbagai macam acara seperti konser, pameran, hingga
@@ -179,11 +179,11 @@
             </p>
 
             <div class="flex-sm-row flex-column align-items-center mx-lg-0 mx-auto justify-content-center gap-3">
-              <button class="btn btn-outlinee">
+              <a href="https://soraksorai.mayaraya.id/" class="btn btn-outlinee" target="blank">
                 <div class="d-flex align-items-center">
                   <b> Kunjungi Website <i class="fa-solid fa-angle-right arrow"></i></b>
                 </div>
-              </button>
+              </a>
             </div>
           </div>
         </div>

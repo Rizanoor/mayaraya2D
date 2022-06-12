@@ -24,55 +24,58 @@
                 </a>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
+
               <div class="modal-body" style="padding: 2rem; padding-top: 0; padding-bottom: 0">
                 <ul class="navbar-nav responsive me-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#" style="color: #E9E9E9;">Tentang</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="profile.html" style="color: #E9E9E9;">Profil</a>
-                    </li>
-
-
-            @guest
-                <div class="modal-footer border-0 gap-3" style="padding: 2rem; padding-top: 0.75rem">
-                    <a href="{{ route('login') }}" class="btn btn-default btn-no-fill">
-                        Masuk
-                    </a>
-                    <a href="../index.html" class="btn btn-fill text-white">3D</a>
-                </div>
-            @endguest
-                @auth
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="font-weight: 800;">
-                            {{ Auth::user()->name }}
-                            <img src="https://ui-avatars.com/api/?name={{Auth::user()->name}}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px; border: 5px solid rgba(255, 255, 255, 0.25);"">
+                  <li class="nav-item active">
+                    <a href="{{ route('home') }}" class="nav-link" href="index.html">Beranda</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#tentang" class="nav-link" href="#">Tentang</a>
+                  </li>
+                  @guest
+                    <div class="modal-footer border-0 gap-3" style="padding: 2rem; padding-top: 0.75rem">
+                        <a href="{{ route('login') }}" class="btn btn-default btn-no-fill">
+                            Masuk
                         </a>
+                        <a href="../index.html" class="btn btn-fill text-white">3D</a>
+                    </div>
+                  @endguest
 
-                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <a href="#" class="dropdown-item">My Account</a>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-                            Logout
+                  @auth
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="font-weight: 800;">
+                                Hai, {{ Auth::user()->name }} !
+                                <img src="https://ui-avatars.com/api/?name={{Auth::user()->name}}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px; border: 5px solid rgba(255, 255, 255, 0.25);"">
                             </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a href="#" class="dropdown-item" style="color:#5C2C8F; font-weight: 800;">3D</a>
+                                <a href="{{ route('setting') }}" class="dropdown-item">Profil</a>
+                                <a href="{{ route('logout') }}"  class="dropdown-item"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                Logout
+                                </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
-                    @endauth
-                 </ul>
-              </ul>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                  @endauth
+                </ul>
+              </div>
+              <div class="modal-footer border-0 gap-3">
+                {{-- <a href="login.html" class="btn btn-default btn-no-fill">
+                  Masuk
+                </a>
+                <a href="register.html" class="btn btn-fill text-white">Daftar</a> --}}
+              </div>
             </div>
-          </div>
         </div>
-        </div>
+      </div>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo" data-aos="fade-down">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
@@ -81,9 +84,6 @@
                 </li>
                 <li class="nav-item">
                     <a href="#tentang" class="nav-link" href="#">Tentang</a>
-                </li>
-                <li class="nav-item">
-                    <a href="profile.html" class="nav-link" href="#">Profil</a>
                 </li>
             </ul>
 
@@ -102,13 +102,14 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="font-weight: 800;">
-                            {{ Auth::user()->name }}
+                            Hai, {{ Auth::user()->name }} !
                             <img src="https://ui-avatars.com/api/?name={{Auth::user()->name}}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px; border: 5px solid rgba(255, 255, 255, 0.25);"">
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <a href="#" class="dropdown-item">My Account</a>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
+                            {{-- <a href="#" class="dropdown-item" style="color:#5C2C8F; font-weight: 800;">3D</a> --}}
+                            <a href="{{ route('setting') }}" class="dropdown-item">Profil</a>
+                            <a href="{{ route('logout') }}"  class="dropdown-item"
                             onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
                             Logout
@@ -119,8 +120,8 @@
                             </form>
                         </div>
                     </li>
-                </ul>
             @endauth
+                </ul>
 
         </div>
       </nav>

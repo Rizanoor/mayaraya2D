@@ -2,106 +2,106 @@
 
 @section('content')
 
-    <div>
-        <div class="mx-auto d-flex flex-lg-row flex-column hero">
-        <!-- Right Column -->
-        <div class="left-column text-start d-flex flex-lg-grow-1 justify-content-center pe-0">
-            <img id="img-fluid main-img" class="h-auto mw-100" src="images/img_landmark2.png" alt=""
-            data-aos="zoom-in" />
-        </div>
-        <!-- Left Column -->
-        <div class="right-column d-flex flex-column align-items-lg-end text-lg-end align-items-end text-center">
+        <div>
+            <div class="mx-auto d-flex flex-lg-row flex-column hero">
+            <!-- Right Column -->
+            <div class="left-column text-start d-flex flex-lg-grow-1 justify-content-center pe-0">
+                <img id="img-fluid main-img" class="h-auto mw-100" src="images/img_landmark2.png" alt=""
+                data-aos="zoom-in" />
+            </div>
+            <!-- Left Column -->
+            <div class="right-column d-flex flex-column align-items-lg-end text-lg-end align-items-end text-center">
 
-            <form method="POST" action="{{ route('register') }}">
-                @csrf
-                <div class="card" data-aos="zoom-in">
-                    <div class="border-0">
-                        <div class="text-center title-masuk">Daftar</div>
-                    </div>
-
-                    <div class="input-group mb-2">
-                        <label for="name" class="w-100">
-                        <input type="text" id="name" name="name" class="form-control mt-2 @error('name') is-invalid @enderror"
-                            autofocus placeholder="Username" required
-                            value="{{ old('name') }}" />
-
-                            @error('name')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </label>
-                    </div>
-
-                    <div class="input-group mb-2">
-                        <label for="email" class="w-100">
-                        <input type="email" id="email" name="email" class="form-control mt-2 @error('email') is-invalid @enderror"
-                            autofocus placeholder="Email" required
-                            value="{{ old('email') }}" />
-
-                            @error('email')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </label>
-                    </div>
-
-                    <div class="input-group mb-1">
-                        <label for="password" class="w-100">
-                        <input type="password" id="password" name="password" class="form-control mt-2  @error('email') is-invalid @enderror"
-                            placeholder="Password" required />
-
-                            @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </label>
-                    </div>
-
-                    <div class="input-group mb-1">
-                        <label for="password-confirm" class="w-100">
-                            <input type="password" id="password-confirm" name="password_confirmation"
-                                class="form-control mt-2"
-                                placeholder="Konfirmasi password" required />
-                        </label>
-                    </div>
-
-                    {{-- @if (Route::has('password.request'))
-                        <div class="d-flex justify-content-end" style="margin-top: 0.75rem">
-                            <a href="{{ route('password.request') }}" class="forgot-password">Lupa Password?</a>
+                <form method="POST" action="{{ route('register') }}">
+                    @csrf
+                    <div class="card" data-aos="zoom-in">
+                        <div class="border-0">
+                            <div class="text-center title-masuk">Daftar</div>
                         </div>
-                    @endif --}}
 
-                    <button type="submit" class="btn btn-card">Daftar</button>
+                        <div class="input-group mb-2">
+                            <label for="name" class="w-100">
+                            <input type="text" id="name" name="name" class="form-control mt-2 @error('name') is-invalid @enderror"
+                                autofocus placeholder="Username" required
+                                value="{{ old('name') }}" />
 
-                    <div class="text-center mt-3 text-muted atau">—————————— atau ——————————</div>
-
-                    <div class="social-media">
-                        <a href="#" class="social-icon" disable>
-                        <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                        <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                        <i class="fab fa-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                        <i class="fa-solid fa-user"></i>
-                        </a>
-                    </div>
-
-                        <div class="text-center mt-3 text-muted register">
-                            Apakah anda sudah punya akun ?
-                            <a href="{{ route('login') }}" class="link"> Masuk di sini</a>
+                                @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </label>
                         </div>
-                    </div>
-                </form>
+
+                        <div class="input-group mb-2">
+                            <label for="email" class="w-100">
+                            <input type="email" id="email" name="email" class="form-control mt-2 @error('email') is-invalid @enderror"
+                                autofocus placeholder="Email" required
+                                value="{{ old('email') }}" />
+
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </label>
+                        </div>
+
+                        <div class="input-group mb-1">
+                            <label for="password" class="w-100">
+                            <input type="password" id="password" name="password" class="form-control mt-2  @error('email') is-invalid @enderror"
+                                placeholder="Password" required />
+
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </label>
+                        </div>
+
+                        <div class="input-group mb-1">
+                            <label for="password-confirm" class="w-100">
+                                <input type="password" id="password-confirm" name="password_confirmation"
+                                    class="form-control mt-2"
+                                    placeholder="Konfirmasi password" required />
+                            </label>
+                        </div>
+
+                        {{-- @if (Route::has('password.request'))
+                            <div class="d-flex justify-content-end" style="margin-top: 0.75rem">
+                                <a href="{{ route('password.request') }}" class="forgot-password">Lupa Password?</a>
+                            </div>
+                        @endif --}}
+
+                        <button type="submit" class="btn btn-card">Daftar</button>
+
+                        <div class="text-center mt-3 text-muted atau">—————————— atau ——————————</div>
+
+                        <div class="social-media">
+                            <a href="#" class="social-icon" disable>
+                            <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                            <i class="fab fa-google"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                            <i class="fa-solid fa-user"></i>
+                            </a>
+                        </div>
+
+                            <div class="text-center mt-3 text-muted register">
+                                Apakah anda sudah punya akun ?
+                                <a href="{{ route('login') }}" class="link"> Masuk di sini</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 </section>
 
