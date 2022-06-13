@@ -42,14 +42,16 @@
                     <label for="" class="d-block input-label mb-2">Username</label>
                     <div class="d-flex w-100 border-bottom">
                       <input class="input-field border-0" type="Text" name="" id="" placeholder="Username"
-                        autocomplete="on" required />
+                             value="{{old('name') ?: Auth::user()->name}}"
+                             autocomplete="on" required />
                     </div>
                   </div>
                   <div style="margin-bottom: 1.75rem">
                     <label for="" class="d-block input-label mb-2">Email Address</label>
                     <div class="d-flex w-100 border-bottom">
                       <input class="input-field border-0" type="email" name="" id="" placeholder="Your Email Address"
-                        autocomplete="on" required />
+                             value="{{old('email') ?: Auth::user()->email}}"
+                             autocomplete="on" required />
                     </div>
                   </div>
 
@@ -59,6 +61,7 @@
                       <input class="input-field border-0" type="password" name="" id="password-content-4-1"
                         placeholder="Your Password" minlength="6" required />
                     </div>
+                    <small>kosongkan jika tidak ingin di ganti</small>
                   </div>
 
                   <div style="margin-top: 1rem">

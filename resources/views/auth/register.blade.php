@@ -19,7 +19,7 @@
                             <div class="text-center title-masuk">Daftar</div>
                         </div>
 
-                        <div class="input-group mb-2">
+                        <div class="input-group">
                             <label for="name" class="w-100">
                             <input type="text" id="name" name="name" class="form-control mt-2 @error('name') is-invalid @enderror"
                                 autofocus placeholder="Username" required
@@ -33,7 +33,7 @@
                             </label>
                         </div>
 
-                        <div class="input-group mb-2">
+                        <div class="input-group">
                             <label for="email" class="w-100">
                             <input type="email" id="email" name="email" class="form-control mt-2 @error('email') is-invalid @enderror"
                                 autofocus placeholder="Email" required
@@ -47,7 +47,7 @@
                             </label>
                         </div>
 
-                        <div class="input-group mb-1">
+                        <div class="input-group">
                             <label for="password" class="w-100">
                             <input type="password" id="password" name="password" class="form-control mt-2  @error('email') is-invalid @enderror"
                                 placeholder="Password" required />
@@ -60,7 +60,7 @@
                             </label>
                         </div>
 
-                        <div class="input-group mb-1">
+                        <div class="input-group">
                             <label for="password-confirm" class="w-100">
                                 <input type="password" id="password-confirm" name="password_confirmation"
                                     class="form-control mt-2"
