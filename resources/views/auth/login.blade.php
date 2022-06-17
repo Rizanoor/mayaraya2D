@@ -21,7 +21,7 @@
                     <div class="input-group mb-2">
                         <label for="email" class="w-100">
                         <input type="email" id="email" name="email" class="form-control mt-2 @error('email') is-invalid @enderror"
-                               autofocus placeholder="Username / Email" required
+                               autofocus placeholder="Email" required
                                value="{{ old('email') }}" />
 
                             @error('email')
@@ -53,25 +53,18 @@
 
                     <button type="submit" href="{{ route('home') }}" class="btn btn-card">Masuk</button>
 
-                    <div class="text-center mt-3 text-muted atau">—————————— atau ——————————</div>
+                    <div class="text-center atau">
+                        <span class="garis-1"></span>
+                        <span class="text-masuk">atau masuk dengan</span>
+                        <span class="garis-2"></span>
+                      </div>
 
-                    <div class="social-media">
-                        <a href="#" class="social-icon" disable>
-                        <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                        <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                        <i class="fab fa-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                        <i class="fa-solid fa-user"></i>
-                        </a>
-                    </div>
+                      <button class="btn btn-card-social">
+                        <img src="https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/50524134.svg" alt="" /><span>Google</span>
+                      </button>
 
                         <div class="text-center mt-3 text-muted register">
-                            Apakah anda tidak punya akun ?
+                            Tidak punya akun ?
                             <a href="{{ route('register') }}" class="link"> Daftar di sini</a>
                         </div>
                     </div>

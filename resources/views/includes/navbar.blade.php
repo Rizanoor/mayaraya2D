@@ -47,7 +47,7 @@
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="font-weight: 800;">
                                 Hai, {{ Auth::user()->name }} !
-                                <img src="https://ui-avatars.com/api/?name={{Auth::user()->name}}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px; border: 5px solid rgba(255, 255, 255, 0.25);"">
+                                <img src="/uploads/photos/{{ Auth::user()->photo }}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px; border: 5px solid rgba(255, 255, 255, 0.25);"">
                             </a>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a href="#" class="dropdown-item" style="color:#5C2C8F; font-weight: 800;">3D</a>
@@ -103,7 +103,7 @@
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="font-weight: 800;">
                             Hai, {{ Auth::user()->name }} !
-                            <img src="https://ui-avatars.com/api/?name={{Auth::user()->name}}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px; border: 5px solid rgba(255, 255, 255, 0.25);"">
+                            <img src="/uploads/photos/{{ Auth::user()->photo }}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px; border: 5px solid rgba(255, 255, 255, 0.25);"">
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

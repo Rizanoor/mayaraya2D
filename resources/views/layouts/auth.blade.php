@@ -22,7 +22,7 @@
     @yield('content')
 
     {{-- footer --}}
-    @include('includes.footer')
+    {{-- @include('includes.footer') --}}
 
     {{-- script link --}}
     @stack('prepend-script')

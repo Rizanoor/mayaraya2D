@@ -21,3 +21,4 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/settings', [App\Http\Controllers\SettingController::class, 'index'])->name('setting');
+Route::post('/settings', [App\Http\Controllers\SettingController::class, 'update']);
