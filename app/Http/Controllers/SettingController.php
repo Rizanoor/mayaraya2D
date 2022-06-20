@@ -78,7 +78,7 @@ class SettingController extends Controller
     {
         $data = $request->all();
         $item = User::findOrFail(Auth::user()->id);
-
+        
         if ($request->password) {
             $data['password'] =  bcrypt($request->password);
         } else {
@@ -93,7 +93,7 @@ class SettingController extends Controller
             Storage::putFileAs('public/image', $photo, $filename);
 
             // $user = Auth::user();
-            $item->photo = $filename;
+            $data['photo'] = $filename;
             // $item->save();
         }
 
