@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
-
+use Image;
 class SettingController extends Controller
 {
     /**
@@ -83,10 +83,23 @@ class SettingController extends Controller
             unset($data['password']);
         }
 
+        // Handle the user upload of photo
+        if ($request->hasFile('photo')) {
+            $photo = $request->file('photo');
+            $filename = time() . '.' . $photo->getClientOriginalExtension();
+            Image::make($photo)->resize(300, 300)->save(public_path('uploads/photos/' . $filename));
+
+            // $user = Auth::user();
+            $item->photo = $filename;
+            // $item->save();
+        }
+
+        // return view('profile', array('user'=> Auth::user()));
+
         $item->update($data);
         $request->session()->flash('success', "Your account '{$item->name}' has been updated");
 
-        return redirect()->route($redirect);
+        return redirect()->route($redirect, array('user'=> Auth::user()));
     }
 
     /**

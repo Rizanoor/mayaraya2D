@@ -20,5 +20,10 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/settings', [App\Http\Controllers\SettingController::class, 'index'])->name('setting');
-Route::post('/settings', [App\Http\Controllers\SettingController::class, 'update']);
+// Route::get('/settings', [App\Http\Controllers\SettingController::class, 'index'])->name('setting');
+// Route::post('/settings', [App\Http\Controllers\SettingController::class, 'update']);
+
+Route::get('/settings', [App\Http\Controllers\SettingController::class, 'index'])
+    ->name('dashboard-settings-account');
+Route::post('/settings/{redirect}', [App\Http\Controllers\SettingController::class, 'update'])
+    ->name('dashboard-settings-redirect');

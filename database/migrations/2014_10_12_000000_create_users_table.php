@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->date('dob')->nullable();
             $table->string('photo')->default('default.png');
             $table->string('avatar')->nullable();
-
+            $table->string('phoneNumber')->nullable();
             $table->integer('category_id')->nullable();
             $table->integer('role_id')->nullable();
 

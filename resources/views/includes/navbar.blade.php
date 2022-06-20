@@ -51,7 +51,7 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a href="#" class="dropdown-item" style="color:#5C2C8F; font-weight: 800;">3D</a>
-                                <a href="{{ route('setting') }}" class="dropdown-item">Profil</a>
+                                <a href="{{ route('dashboard-settings-account') }}" class="dropdown-item">Profil</a>
                                 <a href="{{ route('logout') }}"  class="dropdown-item"
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
@@ -108,7 +108,7 @@
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             {{-- <a href="#" class="dropdown-item" style="color:#5C2C8F; font-weight: 800;">3D</a> --}}
-                            <a href="{{ route('setting') }}" class="dropdown-item">Profil</a>
+                            <a href="{{ route('dashboard-settings-account') }}" class="dropdown-item">Profil</a>
                             <a href="{{ route('logout') }}"  class="dropdown-item"
                             onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
