@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,7 @@ Route::get('/settings', [App\Http\Controllers\SettingController::class, 'index']
     ->name('dashboard-settings-account');
 Route::post('/settings/{redirect}', [App\Http\Controllers\SettingController::class, 'update'])
     ->name('dashboard-settings-redirect');
+
+Route::get('/aaa', function () {
+    return view('welcome');
+});

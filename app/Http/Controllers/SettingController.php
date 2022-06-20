@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Image;
+use App\Models\User;
+use Illuminate\Support\Facades\Storage;
 class SettingController extends Controller
 {
     /**
@@ -75,7 +77,7 @@ class SettingController extends Controller
     public function update(Request $request, $redirect)
     {
         $data = $request->all();
-        $item = Auth::user();
+        $item = User::findOrFail(Auth::user()->id);
 
         if ($request->password) {
             $data['password'] =  bcrypt($request->password);
@@ -87,7 +89,8 @@ class SettingController extends Controller
         if ($request->hasFile('photo')) {
             $photo = $request->file('photo');
             $filename = time() . '.' . $photo->getClientOriginalExtension();
-            Image::make($photo)->resize(300, 300)->save(public_path('uploads/photos/' . $filename));
+            // Image::make($photo)->resize(300, 300)->save(public_path('uploads/photos/' . $filename));
+            Storage::putFileAs('public/image', $photo, $filename);
 
             // $user = Auth::user();
             $item->photo = $filename;
