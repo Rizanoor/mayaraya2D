@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePengajuanTable extends Migration
+class CreateSponsorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreatePengajuanTable extends Migration
      */
     public function up()
     {
-        Schema::create('pengajuan', function (Blueprint $table) {
+        Schema::create('sponsors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('ktp');
-            $table->string('sertifikat');
-            $table->integer('user_id');
+            $table->string('slug');
+            $table->string('link');
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreatePengajuanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pengajuan');
+        Schema::dropIfExists('sponsors');
     }
 }
