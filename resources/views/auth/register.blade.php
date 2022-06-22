@@ -1,5 +1,9 @@
 @extends('layouts.auth')
 
+@section('title')
+    Mayaraya
+@endsection
+
 @section('content')
 
         <div>
@@ -76,13 +80,14 @@
 
                         <div class="text-center atau">
                             <span class="garis-1"></span>
-                            <span class="text-masuk">atau masuk dengan</span>
+                            <span class="text-masuk">atau daftar dengan</span>
                             <span class="garis-2"></span>
                           </div>
 
-                          <button class="btn btn-card-social">
-                            <img src="https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/50524134.svg" alt="" /><span>Google</span>
-                          </button>
+                          <a href="{{ route('google.login') }}" class="btn btn-card-social" style="text-decoration:none; color:#5C2C8F">
+                            <img src="https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/50524134.svg" alt="" />
+                            <span>Google</span>
+                          </a>
 
                             <div class="text-center mt-3 text-muted register">
                                 Sudah punya akun ?

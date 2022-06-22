@@ -103,7 +103,12 @@
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="font-weight: 800;">
                             Hai, {{ Auth::user()->name }} !
-                            <img src="{{ Storage::url('image/' . Auth::user()->photo) }}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px; border: 5px solid rgba(255, 255, 255, 0.25);"">
+                            <img src="{{ Storage::url('image/' . Auth::user()->photo) }}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px; border: 5px solid rgba(255, 255, 255, 0.25);">
+                            {{-- @if (Auth::user()->avatar)
+                                <img src="{{ Auth::user()->avatar }}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px; border: 5px solid rgba(255, 255, 255, 0.25);">
+                            @else
+                                <img src="{{ Storage::url('image/' . Auth::user()->photo) }}" class="rounded-circle user-photo w-15" alt="" style="max-height: 45px; border: 5px solid rgba(255, 255, 255, 0.25);">
+                            @endif --}}
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

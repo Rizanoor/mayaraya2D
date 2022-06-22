@@ -1,5 +1,9 @@
 @extends('layouts.auth')
 
+@section('title')
+    Mayaraya
+@endsection
+
 @section('content')
     <div>
         <div class="mx-auto d-flex flex-lg-row flex-column hero">
@@ -21,7 +25,7 @@
                     <div class="input-group mb-2">
                         <label for="email" class="w-100">
                         <input type="email" id="email" name="email" class="form-control mt-2 @error('email') is-invalid @enderror"
-                               autofocus placeholder="Email" required
+                               autofocus placeholder="Email"
                                value="{{ old('email') }}" />
 
                             @error('email')
@@ -35,7 +39,7 @@
                     <div class="input-group mb-1">
                         <label for="password" class="w-100">
                         <input type="password" id="password" name="password" class="form-control mt-2  @error('email') is-invalid @enderror"
-                               placeholder="Password" required />
+                               placeholder="Password" />
 
                             @error('password')
                                <span class="invalid-feedback" role="alert">
@@ -59,9 +63,11 @@
                         <span class="garis-2"></span>
                       </div>
 
-                      <button class="btn btn-card-social">
-                        <img src="https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/50524134.svg" alt="" /><span>Google</span>
-                      </button>
+
+                        <a href="{{ route('google.login') }}" class="btn btn-card-social" style="text-decoration:none; color:#5C2C8F">
+                            <img src="https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/50524134.svg" alt="" />
+                            <span>Google</span>
+                        </a>
 
                         <div class="text-center mt-3 text-muted register">
                             Tidak punya akun ?

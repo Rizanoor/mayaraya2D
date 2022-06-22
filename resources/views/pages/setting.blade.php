@@ -33,6 +33,21 @@
                                      border-radius: 50%;
                                      margin-right: 25px">
                                      Username
+                                 {{-- @if (Auth::user()->avatar)
+                                     <img src="{{ Auth::user()->avatar }}" class="rounded-circle user-photo w-15" alt=""
+                                            style="width: 50px;
+                                            height: 50px;
+                                            float:left;
+                                            border-radius: 50%;
+                                            margin-right: 25px"> Username
+                                 @else
+                                     <img src="{{ Storage::url('image/' . Auth::user()->photo) }}" class="rounded-circle user-photo w-15" alt=""
+                                            style="width: 50px;
+                                            height: 50px;
+                                            float:left;
+                                            border-radius: 50%;
+                                            margin-right: 25px">
+                                 @endif --}}
                   <h4 class="caption-text">
                                 {{ Auth::user()->name }}
                             </h4>
