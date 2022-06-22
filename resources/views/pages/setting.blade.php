@@ -31,13 +31,14 @@
                                     class="btn btn-filll position-absolute btn-avatar-mobile">Ganti avatar</a>
                             </div>
                             <p class="title-text">
-                                <img src="{{ Storage::url('image/' . Auth::user()->photo) }}" alt=""
-                                    style="width: 50px;
-                                height: 50px;
-                                float:left;
-                                border-radius: 50%;
-                                margin-right: 25px">
-                                Username
+                                    <img src="{{ Storage::url('image/' . Auth::user()->photo) }}" alt=""
+                                        style="width: 50px;
+                                    height: 50px;
+                                    float:left;
+                                    border-radius: 50%;
+                                    margin-right: 25px">
+                                    Username      
+                               
                             </p>
 
                             <h4 class="caption-text">
