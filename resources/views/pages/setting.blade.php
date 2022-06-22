@@ -26,15 +26,14 @@
                             <a href="https://readyplayer.me/avatar" class="btn btn-filll position-absolute btn-avatar-mobile">Ganti avatar</a>
                             </div>
                             <p class="title-text">
-                            <img src="/uploads/photos/{{ Auth::user()->photo }}" alt="" style="width: 50px;
-                                height: 50px;
-                                float:left;
-                                border-radius: 50%;
-                                margin-right: 25px">
-                            Username
-                            </p>
-
-                            <h4 class="caption-text">
+                                <img src="{{ Storage::url('image/' . Auth::user()->photo) }}" alt=""
+                                     style="width: 50px;
+                                     height: 50px;
+                                     float:left;
+                                     border-radius: 50%;
+                                     margin-right: 25px">
+                                     Username
+                  <h4 class="caption-text">
                                 {{ Auth::user()->name }}
                             </h4>
                             @include('components.alert')
