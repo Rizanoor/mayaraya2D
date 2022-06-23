@@ -16,14 +16,19 @@ class CreateSchedulesTable extends Migration
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('price');
-            $table->longText('description');
+            $table->integer("price");
+            $table->text("description");
+            $table->string("image");
             $table->date('date');
-            $table->time('start_time');
-            $table->time('end_time');
-            $table->string('link_game');
-            $table->string('room_code');
-            $table->integer('user_id');
+            $table->string('starttime');
+            $table->string('endtime');
+            $table->string('availableScheduleDate');
+            $table->string('dueDateSchedule');
+            $table->string('status')->nullable();
+            $table->string('notifyStatus')->default('not notified');
+            $table->string('emailNotifyStatus')->default('not notified');
+            $table->foreignId('user_id');
+            $table->string('author');
             $table->timestamps();
         });
     }

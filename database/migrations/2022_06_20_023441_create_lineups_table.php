@@ -16,14 +16,13 @@ class CreateLineupsTable extends Migration
     {
         Schema::create('lineups', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('main');
             $table->string('name');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->string('date');
             $table->string('time');
             $table->text('information');
             $table->string('image');
-            $table->timestamp('published_at');
+            $table->timestamp('published_at')->nullable;
             $table->timestamps();
         });
     }

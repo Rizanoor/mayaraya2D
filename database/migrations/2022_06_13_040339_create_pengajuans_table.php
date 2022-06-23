@@ -15,13 +15,13 @@ class CreatePengajuansTable extends Migration
     {
         Schema::create('pengajuans', function (Blueprint $table) {
             $table->id();
-            $table->string('ktp');
-            $table->string('sertifikat');
-            $table->string('foto');
-            $table->string('name');
-            $table->string('marketlink');
-            $table->string('status');
-            $table->foreignId('user_id');
+            $table->string('ktp')->nullable();
+            $table->string('sertifikat')->nullable();
+            $table->string('foto')->nullable();
+            $table->string('name')->nullable();
+            $table->string('marketlink')->nullable();
+            $table->string('status')->default('Review');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }
