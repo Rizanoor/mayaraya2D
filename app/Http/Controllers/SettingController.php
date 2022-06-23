@@ -80,7 +80,7 @@ class SettingController extends Controller
         $data = $request->all();
         $item = User::findOrFail(Auth::user()->id);
         $request->validate([
-            'photo' => 'required|image|file|max:1024',
+            'photo' => 'required|mimes:jpeg,png,jpg|image|file|max:1024',
         ]);
 
         if ($request->password) {
@@ -104,11 +104,10 @@ class SettingController extends Controller
         // return view('profile', array('user'=> Auth::user()));
 
         $item->update($data);
-        
+
         $request->session()->flash('success', "Your account '{$item->name}' has been updated");
 
         return redirect()->route($redirect);
-
     }
 
     /**

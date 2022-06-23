@@ -31,14 +31,14 @@
                                     class="btn btn-filll position-absolute btn-avatar-mobile">Ganti avatar</a>
                             </div>
                             <p class="title-text">
-                                    <img src="{{ Storage::url('image/' . Auth::user()->photo) }}" alt=""
-                                        style="width: 50px;
+                                <img src="{{ Storage::url('image/' . Auth::user()->photo) }}" alt=""
+                                    style="width: 50px;
                                     height: 50px;
                                     float:left;
                                     border-radius: 50%;
                                     margin-right: 25px">
-                                    Username      
-                               
+                                Username
+
                             </p>
 
                             <h4 class="caption-text">
@@ -85,6 +85,7 @@
                                     <input class="input-field border-0" type="file" name="photo" />
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 </div>
+                                <small>Format: Jpg, Jpeg, PNG</small>
                             </div>
                             <button class="btn btn-filll d-block w-100" type="submit">
                                 Edit
