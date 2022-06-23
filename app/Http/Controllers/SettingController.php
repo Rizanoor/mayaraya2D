@@ -109,30 +109,6 @@ class SettingController extends Controller
 
         return redirect()->route($redirect);
 
-        // $rules = [
-        //     'photo' => 'required|image|file|max:1024',
-        // ];
-
-
-        // if ($request->password) {
-        //     $rules['password'] =  bcrypt($request->password);
-        // } else {
-        //     unset($rules['password']);
-        // }
-
-        // $validatedData = $request->validate($rules);
-
-        // if ($request->file('photo')) {
-        //     if ($request->post('old-image')) Storage::delete($request->post('old-image'));
-        //     $validatedData['photo'] = $request->file('photo')->store('public/image');
-        // }
-
-        // $validatedData['id'] = auth()->user()->id;
-
-        // $user->where('id', $user->id)->update($validatedData);
-
-        // $request->session()->flash('success', "Your account '{$user->name}' has been updated");
-        // return redirect()->route($redirect);
     }
 
     /**
