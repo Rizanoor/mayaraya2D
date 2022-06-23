@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Image;
 use App\Models\User;
 use Illuminate\Support\Facades\Storage;
+
 class SettingController extends Controller
 {
     /**
@@ -19,7 +20,7 @@ class SettingController extends Controller
     {
         $user = Auth::user();
 
-        return view('pages.setting',[
+        return view('pages.setting', [
             'user' => $user
         ]);
     }
@@ -74,11 +75,14 @@ class SettingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $redirect)
+    public function update(Request $request, User $user, $redirect)
     {
         $data = $request->all();
         $item = User::findOrFail(Auth::user()->id);
-        
+        $request->validate([
+            'photo' => 'required|image|file|max:1024',
+        ]);
+
         if ($request->password) {
             $data['password'] =  bcrypt($request->password);
         } else {
@@ -100,9 +104,35 @@ class SettingController extends Controller
         // return view('profile', array('user'=> Auth::user()));
 
         $item->update($data);
+        
         $request->session()->flash('success', "Your account '{$item->name}' has been updated");
 
         return redirect()->route($redirect);
+
+        // $rules = [
+        //     'photo' => 'required|image|file|max:1024',
+        // ];
+
+
+        // if ($request->password) {
+        //     $rules['password'] =  bcrypt($request->password);
+        // } else {
+        //     unset($rules['password']);
+        // }
+
+        // $validatedData = $request->validate($rules);
+
+        // if ($request->file('photo')) {
+        //     if ($request->post('old-image')) Storage::delete($request->post('old-image'));
+        //     $validatedData['photo'] = $request->file('photo')->store('public/image');
+        // }
+
+        // $validatedData['id'] = auth()->user()->id;
+
+        // $user->where('id', $user->id)->update($validatedData);
+
+        // $request->session()->flash('success', "Your account '{$user->name}' has been updated");
+        // return redirect()->route($redirect);
     }
 
     /**
