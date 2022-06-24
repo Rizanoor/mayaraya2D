@@ -76,6 +76,8 @@ class SettingController extends Controller
      */
     public function update(Request $request, $redirect)
     {
+
+
         $data = $request->all();
         $item = User::findOrFail(Auth::user()->id);
 
@@ -86,6 +88,10 @@ class SettingController extends Controller
         }
 
         // Handle the user upload of photo
+        $photo = $request->validate([
+            'photo' => 'image|mimes:jpeg,png,jpg|file|max:1024',
+        ]);
+
         if ($request->hasFile('photo')) {
             $photo = $request->file('photo');
             $filename = time() . '.' . $photo->getClientOriginalExtension();

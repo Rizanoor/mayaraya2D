@@ -48,7 +48,7 @@
                                             border-radius: 50%;
                                             margin-right: 25px">
                                  @endif --}}
-                  <h4 class="caption-text">
+                            <h4 class="caption-text">
                                 {{ Auth::user()->name }}
                             </h4>
                             @include('components.alert')
@@ -91,6 +91,7 @@
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 </div>
                             </div>
+                            <small>Format: Jpg, Jpeg, PNG</small>
                             <button class="btn btn-filll d-block w-100" type="submit">
                                 Edit
                             </button>
