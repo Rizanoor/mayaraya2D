@@ -17,15 +17,12 @@
         <img class="img-maya" width="200px" src="images/img_maya.png" alt="" data-aos="fade-up" data-aos-delay="300">
       </div>
       <div class="col-8">
-        <p class="sub-headlinee text-start" data-aos="fade-up" data-aos-delay="300"
+        <p class="sub-headlinee text-start justify-content-center" data-aos="fade-up" data-aos-delay="300"
           style="font-family: 'Lato', sans-serif; margin-top: 5rem;">
-          <b>Maya</b>
-          merupakan mascot pertama dari MayaRaya. <br>
-          Terinspirasi dari bla bla bla. Lorem ipsum dolor sit amet, <br>
-          consectetur adipiscing elit. Morbi non eros <br>
-          ut orci imperdiet pellentesque. Vestibulum id viverra purus, et tincidunt <br>
-          risus. Donec mollis lobortis nunc et pulvinar.
-          non.
+          Merupakan mascot pertama dari MayaRaya. <br>
+          Karakter Maya, berfokus pada aliran energi yang dimunculkan dari salah satu sel manusia <br>
+          yaitu mitokondria. Energi sering dikaitkan sebagai sumber kehidupan sehingga Maya <br>
+          diharapkan dapat membagikan energi itu di dalam dunia maya metaverse.
         </p>
       </div>
     </div>
@@ -33,12 +30,10 @@
       <div class="col-8 ">
         <p class="sub-headlinee text-end" data-aos="fade-up" data-aos-delay="400"
           style="font-family: 'Lato', sans-serif; margin-top: 5rem;">
-          <b>Raya</b>
-          merupakan temannya Maya, mascot kedua dari MayaRaya. <br>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non eros <br>
-          ut orci imperdiet pellentesque. Vestibulum id viverra purus, et tincidunt <br>
-          risus. Donec mollis lobortis nunc et pulvinar.
-          non.
+          Merupakan maskot kedua dari MayaRaya. Raya yang memiliki arti sebagai <i>stream of the river <br> (aliran)</i>
+          dan menjadi symbol aliran energi. Bentuk dari raya
+          terinspirasi dari ubur-ubur dimana <br>
+          terdapat jenis ubur-ubur yang ‘kekal’.
         </p>
       </div>
       <div class="col-3 text-start">
