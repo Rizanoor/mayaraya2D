@@ -70,12 +70,6 @@
                             </label>
                         </div>
 
-                        {{-- @if (Route::has('password.request'))
-                            <div class="d-flex justify-content-end" style="margin-top: 0.75rem">
-                                <a href="{{ route('password.request') }}" class="forgot-password">Lupa Password?</a>
-                            </div>
-                        @endif --}}
-
                         <button type="submit" class="btn btn-card">Daftar</button>
 
                         <div class="text-center atau">
