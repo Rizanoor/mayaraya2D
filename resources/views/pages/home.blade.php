@@ -14,11 +14,11 @@
     </h4>
     <div class="row">
       <div class="col-3 text-end">
-        <img class="img-maya" width="200px" src="images/img_maya.png" alt="" data-aos="fade-up" data-aos-delay="300">
+        <img class="img-maya" width="150px" src="images/img_maya.png" alt="" data-aos="fade-up" data-aos-delay="300">
       </div>
       <div class="col-8">
         <p class="sub-headlinee text-start justify-content-center" data-aos="fade-up" data-aos-delay="300"
-          style="font-family: 'Lato', sans-serif; margin-top: 5rem;">
+          style="font-family: 'Lato', sans-serif; margin-top: 2rem;">
           Merupakan mascot pertama dari MayaRaya. <br>
           Karakter Maya, berfokus pada aliran energi yang dimunculkan dari salah satu sel manusia <br>
           yaitu mitokondria. Energi sering dikaitkan sebagai sumber kehidupan sehingga Maya <br>
@@ -29,7 +29,7 @@
     <div class="row">
       <div class="col-8 ">
         <p class="sub-headlinee text-end" data-aos="fade-up" data-aos-delay="400"
-          style="font-family: 'Lato', sans-serif; margin-top: 5rem;">
+          style="font-family: 'Lato', sans-serif; margin-top: 2rem;">
           Merupakan maskot kedua dari MayaRaya. Raya yang memiliki arti sebagai <i>stream of the river <br> (aliran)</i>
           dan menjadi symbol aliran energi. Bentuk dari raya
           terinspirasi dari ubur-ubur dimana <br>
@@ -37,7 +37,7 @@
         </p>
       </div>
       <div class="col-3 text-start">
-        <img width="200px" src="images/img_raya.png" alt="" data-aos="fade-up" data-aos-delay="400">
+        <img class="img-raya" width="200px" src="images/img_raya.png" alt="" data-aos="fade-up" data-aos-delay="400">
       </div>
     </div>
 

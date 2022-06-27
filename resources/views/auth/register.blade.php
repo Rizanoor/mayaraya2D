@@ -8,13 +8,13 @@
 
         <div>
             <div class="mx-auto d-flex flex-lg-row flex-column hero">
-            <!-- Right Column -->
+            <!-- Left Column -->
             <div class="left-column text-start d-flex flex-lg-grow-1 justify-content-center pe-0">
-                <img id="img-fluid main-img" class="h-auto mw-100" src="images/img_landmark2.png" alt=""
+                <img class=" img-fluid main-img" src="images/img_landmark2.png" alt=""
                 data-aos="zoom-in" />
             </div>
-            <!-- Left Column -->
-            <div class="right-column d-flex flex-column align-items-lg-end text-lg-end align-items-end text-center">
+            <!-- Right Column -->
+            <div class="right-column d-flex flex-column align-items-lg-end text-lg-end align-items-center text-center">
 
                 <form method="POST" action="{{ route('register') }}">
                     @csrf

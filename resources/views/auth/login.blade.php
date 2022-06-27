@@ -9,11 +9,11 @@
     <div class="mx-auto d-flex flex-lg-row flex-column hero">
     <!-- Right Column -->
     <div class="left-column text-start d-flex flex-lg-grow-1 justify-content-center pe-0">
-        <img id="img-fluid main-img" class="h-auto mw-100" src="images/img_landmark2.png" alt=""
+        <img class=" img-fluid main-img" src="images/img_landmark2.png" alt=""
         data-aos="zoom-in" />
     </div>
     <!-- Left Column -->
-    <div class="right-column d-flex flex-column align-items-lg-end text-lg-end align-items-end text-center">
+    <div class="right-column d-flex flex-column align-items-lg-end text-lg-end align-items-center text-center">
 
         <form method="POST" action="{{ route('register') }}">
             @csrf
@@ -23,17 +23,7 @@
                 </div>
 
                 <div class="input-group">
-                    <label for="name" class="w-100">
-                    <input type="text" id="name" name="name" class="form-control mt-2 @error('name') is-invalid @enderror"
-                        autofocus placeholder="Username" required
-                        value="{{ old('name') }}" />
 
-                        @error('name')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
-                    </label>
 
                     <label for="email" class="w-100">
                     <input type="email" id="email" name="email" class="form-control mt-2 @error('email') is-invalid @enderror"
@@ -67,7 +57,7 @@
                     </div>
                 @endif
 
-                <button type="submit" class="btn btn-card">Daftar</button>
+                <button type="submit" class="btn btn-card">Masuk</button>
 
                 <div class="text-center atau">
                     <span class="garis-1"></span>
