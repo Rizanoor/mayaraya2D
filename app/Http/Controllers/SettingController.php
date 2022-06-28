@@ -86,6 +86,10 @@ class SettingController extends Controller
         }
 
         // Handle the user upload of photo
+        $photo = $request->validate([
+            'photo' => 'image|mimes:jpeg,png,jpg|file|max:1024',
+        ]);
+
         if ($request->hasFile('photo')) {
             $photo = $request->file('photo');
             $filename = time() . '.' . $photo->getClientOriginalExtension();
