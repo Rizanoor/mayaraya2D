@@ -1,8 +1,9 @@
-@extends('layouts.resetPassword')
+@extends('layouts.reset')
 
     @section('title')
         Reset Password
     @endsection
+
 
 @section('content')
 <div class="container">
